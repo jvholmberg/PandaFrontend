@@ -1,0 +1,17 @@
+.comp-breadcrumb {
+  display: block;
+  width: 100%;
+  height: 3rem;
+  color: #484848;
+}
+.comp-breadcrumb ol {
+}
+.comp-breadcrumb ol li {
+  display: inline-block;
+  padding: 1rem 1rem;
+  line-height: 1rem;
+}
+.comp-breadcrumb ol li a {
+  color: inherit;
+  text-decoration: none;
+}

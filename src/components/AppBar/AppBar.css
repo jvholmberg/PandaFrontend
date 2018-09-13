@@ -1,0 +1,29 @@
+.comp-appbar {
+  position: fixed;
+  display: block;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  background-color: #2096f3;
+}
+.comp-appbar button {
+  display: block;
+  float: left;
+  margin: 1.5rem;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  box-sizing: border-box;
+}
+.comp-appbar a {
+  display: block;
+  float: left;
+  padding: 1.5rem 1.5rem 1.5rem 0;
+  line-height: 2rem;
+  color: #fff;
+  text-decoration: none;
+}
