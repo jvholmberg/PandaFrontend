@@ -2,7 +2,7 @@ import { bindActionCreators } from 'redux';
 import _ from 'lodash';
 
 export const mapStateToProps = (state, props) => {
-  return {};
+  return props;
 };
 
 export const mapDispatchToProps = (dispatch) => bindActionCreators({

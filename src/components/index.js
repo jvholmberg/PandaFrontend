@@ -1,6 +1,7 @@
 import AppBar from './AppBar';
 import Breadcrumb from './Breadcrumb';
 import { Container, Row, Column } from './Grid';
+import RestrictedRoute from './RestrictedRoute';
 
 export {
   AppBar,
@@ -8,4 +9,5 @@ export {
   Container,
   Row,
   Column,
+  RestrictedRoute,
 };

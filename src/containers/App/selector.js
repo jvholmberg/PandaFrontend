@@ -2,13 +2,10 @@ import { bindActionCreators } from 'redux';
 import _ from 'lodash';
 
 export const mapStateToProps = (state, props) => {
-  return {};
+  const app = _.get(state, 'app', {});;
+  return { app };
 };
 
 export const mapDispatchToProps = (dispatch) => bindActionCreators({
 
 }, dispatch);
-
-const getPathname = (state) => {
-
-};

@@ -60,9 +60,8 @@
 
 .comp-column {
   position: relative;
-  min-height: .1rem;
   padding: 2rem;
-  background-color: #f9f9f9;
+  min-height: .125rem;
   box-sizing: border-box;
 }
 

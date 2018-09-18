@@ -18,14 +18,7 @@ const Row = ({ children, className = '' }) => {
   );
 };
 
-const Column = ({
-  xs = [],
-  sm = [],
-  md = [],
-  lg = [],
-  children,
-  className = '',
-}) => {
+const Column = ({ xs, sm, md, lg, children, className = '', }) => {
   const xsProperties = !_.isEmpty(xs) ? `comp-column-xs-${xs.join(' comp-column-xs-')} ` : '';
   const smProperties = !_.isEmpty(sm) ? `comp-column-sm-${sm.join(' comp-column-sm-')} ` : '';
   const mdProperties = !_.isEmpty(md) ? `comp-column-md-${md.join(' comp-column-md-')} ` : '';
