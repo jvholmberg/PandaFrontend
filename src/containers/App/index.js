@@ -34,8 +34,7 @@ class App extends Component {
                 component={Landing} />
               <RestrictedRoute
                 path='/dashboard'
-                component={Dashboard}
-                requiredRoles={['admin', 'user']} />
+                component={Dashboard} />
               <RestrictedRoute
                 path='/login'
                 component={Login} />

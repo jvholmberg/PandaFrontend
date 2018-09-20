@@ -16,7 +16,6 @@ class Landing extends Component {
 
   }
   render() {
-
     return (
       <Container>
         <Row>
@@ -39,4 +38,4 @@ class Landing extends Component {
     );
   }
 }
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Landing));
+export default connect(mapStateToProps, mapDispatchToProps)(Landing);

@@ -15,7 +15,7 @@ class Navigation extends Component {
   }
   componentDidMount() {
 
-  }s
+  }
   render() {
     return (
       <div className='cont-navigation'>

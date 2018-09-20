@@ -6,6 +6,7 @@ import './Dashboard.css';
 
 import { mapStateToProps, mapDispatchToProps } from './selector';
 import Overview from './views/Overview';
+import Report from './views/Report';
 import Settings from './views/Settings';
 
 class Dashboard extends Component {
@@ -18,7 +19,10 @@ class Dashboard extends Component {
   }
   render() {
     return (
-      <span>Dashboard</span>);
+      <div>
+        <Report />
+      </div>
+    );
   }
 }
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Dashboard));
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

@@ -12,10 +12,12 @@ import { mapStateToProps, mapDispatchToProps } from './selector';
 
 class Error extends Component {
 
+  constructor(props) {
+    super(props);
+  }
   componentDidMount() {
 
   }
-
   render() {
     console.log(this.props);
     const { type } = this.props;
@@ -31,4 +33,4 @@ class Error extends Component {
     }
   }
 }
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Error));
+export default connect(mapStateToProps, mapDispatchToProps)(Error);

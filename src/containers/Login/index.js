@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import './Login.css';
 
+import { Container, Row, Column } from '../../components';
 import { mapStateToProps, mapDispatchToProps } from './selector';
 
 class Login extends Component {
@@ -17,10 +18,14 @@ class Login extends Component {
   render() {
 
     return (
-      <div>
-
-      </div>
+      <Container>
+        <Row>
+          <Column>
+            dwdwwwewew
+          </Column>
+        </Row>
+      </Container>
     );
   }
 }
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

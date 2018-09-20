@@ -14,12 +14,9 @@ class Register extends Component {
   componentDidMount() {
 
   }
-  componentDidUnmount() {
-
-  }
   render() {
 
     return (<span>Register</span>);
   }
 }
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Register));
+export default connect(mapStateToProps, mapDispatchToProps)(Register);
