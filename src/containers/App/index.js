@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { Switch } from 'react-router';
+import { Switch, Route } from 'react-router';
 import { ConnectedRouter as Router } from 'react-router-redux';
 import { connect } from 'react-redux';
 import './App.css'
 
 import { mapStateToProps, mapDispatchToProps } from './selector';
-import { RestrictedRoute } from '../../components';
 import Landing from '../Landing';
 import Navigation from '../Navigation';
 import Dashboard from '../Dashboard';
@@ -25,26 +24,24 @@ class App extends Component {
     const { history, app } = this.props;
     return (
       <Router history={history}>
-        <div className='cont-app'>
+        <div className='app'>
           <Navigation />
-          <div className='app'>
-            <Switch>
-              <RestrictedRoute
-                exact path='/'
-                component={Landing} />
-              <RestrictedRoute
-                path='/dashboard'
-                component={Dashboard} />
-              <RestrictedRoute
-                path='/login'
-                component={Login} />
-              <RestrictedRoute
-                path='/register'
-                component={Register} />
-              <RestrictedRoute
-                component={Error} />
-            </Switch>
-          </div>
+          <Switch>
+            <Route
+              exact path='/'
+              component={Landing} />
+            <Route
+              path='/dashboard'
+              component={Dashboard} />
+            <Route
+              path='/login'
+              component={Login} />
+            <Route
+              path='/register'
+              component={Register} />
+            <Route
+              component={Error} />
+          </Switch>
         </div>
       </Router>
     );

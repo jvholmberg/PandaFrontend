@@ -10,6 +10,7 @@ import dashboardReducer from './containers/Dashboard/reducer';
 import loginReducer from './containers/Login/reducer';
 import navigationReducer from './containers/Navigation/reducer';
 import registerReducer from './containers/Register/reducer';
+import errorReducer from './containers/Error/reducer';
 
 const history = createHistory();
 const middlewares = [
@@ -26,6 +27,7 @@ const store = createStore(
     login: loginReducer,
     navigation: navigationReducer,
     register: registerReducer,
+    errors: errorReducer,
   }),
   composeWithDevTools(
     applyMiddleware(...middlewares)

@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import './Landing.css';
 
-import { Container, Row, Column } from '../../components';
 import { mapStateToProps, mapDispatchToProps } from './selector';
 
 class Landing extends Component {
@@ -17,24 +16,8 @@ class Landing extends Component {
   }
   render() {
     return (
-      <Container>
-        <Row>
-          <Column md={['6']}>
-            Landing left
-          </Column>
-          <Column md={['6']}>
-            Landing right
-          </Column>
-        </Row>
-          <Row>
-            <Column md={['6']}>
-              Landing left
-            </Column>
-            <Column md={['6']}>
-              Landing right
-            </Column>
-          </Row>
-      </Container>
+      <div>
+      </div>
     );
   }
 }
