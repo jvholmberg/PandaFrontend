@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { ConnectedRouter as Router } from 'react-router-redux';
 import 'semantic-ui-css/semantic.min.css';
 import './index.css';
 
@@ -10,7 +11,9 @@ import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render((
   <Provider store={store}>
-    <App history={history} />
+    <Router history={history}>
+      <App />
+    </Router>
   </Provider>
 ), document.getElementById('root'));
 registerServiceWorker();

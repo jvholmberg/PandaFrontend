@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router';
-import { ConnectedRouter as Router } from 'react-router-redux';
 import { connect } from 'react-redux';
 import './App.css'
 
@@ -11,6 +10,7 @@ import Dashboard from '../Dashboard';
 import Login from '../Login';
 import Register from '../Register';
 import Error from '../Error';
+import NotFound from '../../components/NotFound';
 
 class App extends Component {
 
@@ -21,9 +21,7 @@ class App extends Component {
 
   }
   render() {
-    const { history, app } = this.props;
     return (
-      <Router history={history}>
         <div className='app'>
           <Navigation />
           <Switch>
@@ -40,10 +38,9 @@ class App extends Component {
               path='/register'
               component={Register} />
             <Route
-              component={Error} />
+              component={NotFound} />
           </Switch>
         </div>
-      </Router>
     );
   }
 }

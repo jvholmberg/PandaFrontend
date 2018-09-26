@@ -32,8 +32,9 @@ export default (state = initialState, action) => {
       const arr = _.get(state, 'all', []);
       const oob = action.data >= arr.length;
       const neg = action.data < 0;
-      const nxt = oob ? arr.length - 1 : (neg ? 0 : nxt);
-      return { ...state, current: nxt };
+      if (oob) { return { ...state, current: arr.length - 1}; }
+      if (neg) { return { ...state, current: 0 }; }
+      return { ...state, current: action.data - 1 };
     }
     case PREV_ERROR: {
       const cur = _.get(state, 'current', 0);

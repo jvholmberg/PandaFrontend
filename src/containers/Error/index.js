@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import _ from 'lodash';
-import { Container, Header, Pagination } from 'semantic-ui-react';
+import { Container, Header, Message, Pagination } from 'semantic-ui-react';
 
 import { mapStateToProps, mapDispatchToProps } from './selector';
 
@@ -23,9 +23,20 @@ class Error extends Component {
           as='h1'
           content={_.get(error, 'status')}
           subheader={_.get(error, 'message')} />
-        <Pagination
-          totalPages={total}
-          onPageChange={(event, data) => goToError(data.activePage)} />
+          <Message>
+            {_.get(error, 'stacktrace')}
+          </Message>
+          <Pagination
+            defaultActivePage={total - 1}
+            firstItem={null}
+            lastItem={null}
+            pointing
+            secondary
+            totalPages={total}
+            onPageChange={(event, data) => {
+
+              goToError(data.activePage);
+            }} />
       </Container>
     );
   }
