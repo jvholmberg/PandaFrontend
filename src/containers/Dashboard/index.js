@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import './Dashboard.css';
@@ -20,7 +19,7 @@ class Dashboard extends Component {
   render() {
     return (
       <div>
-        <Report />
+        <Overview />
       </div>
     );
   }

@@ -8,7 +8,6 @@ import appReducer from './containers/App/reducer';
 import landingReducer from './containers/Landing/reducer';
 import dashboardReducer from './containers/Dashboard/reducer';
 import loginReducer from './containers/Login/reducer';
-import navigationReducer from './containers/Navigation/reducer';
 import registerReducer from './containers/Register/reducer';
 import errorReducer from './containers/Error/reducer';
 
@@ -25,7 +24,6 @@ const store = createStore(
     landing: landingReducer,
     dashboard: dashboardReducer,
     login: loginReducer,
-    navigation: navigationReducer,
     register: registerReducer,
     errors: errorReducer,
   }),
