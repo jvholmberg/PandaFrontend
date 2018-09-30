@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import _ from 'lodash';
-import { Container, Header, Message, Pagination } from 'semantic-ui-react';
+import { Responsive, Visibility, Container, Header, Message, Pagination } from 'semantic-ui-react';
 
 import { mapStateToProps, mapDispatchToProps } from './selector';
 import ErrorHeader from './Header';
-import PageLayout from '../../components/PageLayout';
+import Navigation from '../../components/Navigation';
 
 class Error extends Component {
 
@@ -27,11 +27,15 @@ class Error extends Component {
       hideFixedNavigation,
     } = this.props;
     return (
-      <PageLayout
-        showFixedNavigation={showFixedNavigation}
-        hideFixedNavigation={hideFixedNavigation}
-        fixed={fixed}
-        header={ErrorHeader}>
+      <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+        <Visibility
+          once={false}
+          onBottomPassed={showFixedNavigation}
+          onBottomPassedReverse={hideFixedNavigation}>
+          <ErrorHeader>
+            <Navigation fixed={fixed} />
+          </ErrorHeader>
+        </Visibility>
         <Container>
           <Header
             as='h1'
@@ -52,7 +56,7 @@ class Error extends Component {
                 goToError(data.activePage);
               }} />
         </Container>
-      </PageLayout>
+      </Responsive>
     );
   }
 }

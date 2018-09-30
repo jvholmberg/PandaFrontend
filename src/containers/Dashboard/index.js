@@ -4,9 +4,6 @@ import { connect } from 'react-redux';
 import './Dashboard.css';
 
 import { mapStateToProps, mapDispatchToProps } from './selector';
-import Overview from './views/Overview';
-import Report from './views/Report';
-import Settings from './views/Settings';
 
 class Dashboard extends Component {
 
@@ -19,7 +16,6 @@ class Dashboard extends Component {
   render() {
     return (
       <div>
-        <Overview />
       </div>
     );
   }
