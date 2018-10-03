@@ -1,13 +1,9 @@
 import { bindActionCreators } from 'redux';
 import _ from 'lodash';
-import { hideFixedNavigation, showFixedNavigation } from './reducer';
 
 export const mapStateToProps = (state, props) => {
-  const { fixed } = _.get(state, 'app', {});;
-  return { fixed };
+  return {};
 };
 
 export const mapDispatchToProps = (dispatch) => bindActionCreators({
-  hideFixedNavigation,
-  showFixedNavigation
 }, dispatch);

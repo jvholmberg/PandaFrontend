@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Responsive } from 'semantic-ui-react';
 import './Landing.css';
 
 import { mapStateToProps, mapDispatchToProps } from './selector';
+import { DefaultPageLayout as PageLayout } from '../../components/PageLayout';
 
 class Landing extends Component {
 
@@ -15,10 +14,14 @@ class Landing extends Component {
 
   }
   render() {
+    const { fixed, showFixedNavigation, hideFixedNavigation } = this.props;
     return (
-      <Responsive>
+      <PageLayout
+        fixed={fixed}
+        showFixedNavigation={showFixedNavigation}
+        hideFixedNavigation={hideFixedNavigation}>
         <div style={{ height: '500vh' }}>a</div>
-      </Responsive>
+      </PageLayout>
     );
   }
 }

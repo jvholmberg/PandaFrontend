@@ -4,14 +4,12 @@ import { connect } from 'react-redux';
 import './App.css'
 
 import { mapStateToProps, mapDispatchToProps } from './selector';
-import PageLayout from '../../components/PageLayout'
-
-import Landing from '../Landing';
-import Navigation from '../../components/Navigation';
 import Dashboard from '../Dashboard';
+import Landing from '../Landing';
 import Login from '../Login';
 import Register from '../Register';
-import Error from '../Error';
+
+import Navigation from '../../components/Navigation';
 import NotFound from '../../components/NotFound';
 
 class App extends Component {
@@ -23,14 +21,18 @@ class App extends Component {
 
   }
   render() {
-    const { fixed, showFixedNavigation, hideFixedNavigation } = this.props;
     return (
       <Switch>
+        {/* Unrestricted routes */}
         <Route exact path='/' component={Landing} />
-        <Route path='/dashboard' component={Dashboard} />
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
-        <Route component={Error} />
+
+        {/* Restricted routes */}
+        <Route path='/dashboard' component={Dashboard} />
+
+        {/* No matching route found */}
+        <Route component={NotFound} />
       </Switch>
     );
   }
