@@ -34,11 +34,15 @@ class Landing extends Component {
   }
   render() {
     const { fixed, showFixedNavigation, hideFixedNavigation } = this.props;
+    const { open, toggleSidebar, closeSidebar } = this.props;
     return (
       <PageLayout
         fixed={fixed}
         showFixedNavigation={showFixedNavigation}
         hideFixedNavigation={hideFixedNavigation}
+        open={open}
+        toggleSidebar={toggleSidebar}
+        closeSidebar={closeSidebar} 
         heading={Heading}>
         <div style={{ height: '500vh' }}>a</div>
       </PageLayout>

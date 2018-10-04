@@ -1,7 +1,7 @@
 import React from 'react';
 import { Responsive, Visibility, Segment, Menu, Container } from 'semantic-ui-react';
 
-import Navigation from '../../Navigation';
+import { DesktopNavigation as Navigation } from '../../Navigation';
 
 const DesktopLayout = ({
   children,
