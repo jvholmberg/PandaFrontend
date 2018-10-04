@@ -3,7 +3,13 @@ import { Responsive, Visibility, Segment, Menu, Container } from 'semantic-ui-re
 
 import Navigation from '../../Navigation';
 
-const DesktopLayout = ({ children, heading, fixed, showFixedNavigation, hideFixedNavigation }) => (
+const DesktopLayout = ({
+  children,
+  heading: Heading,
+  fixed,
+  showFixedNavigation,
+  hideFixedNavigation
+}) => (
   <Responsive minWidth={Responsive.onlyTablet.minWidth}>
     <Visibility
       once={false}
@@ -15,7 +21,7 @@ const DesktopLayout = ({ children, heading, fixed, showFixedNavigation, hideFixe
         style={{ minHeight: 700, padding: '1em 0em' }}
         vertical>
         <Navigation fixed={fixed} />
-        {heading}
+        <Heading />
       </Segment>
     </Visibility>
     {children}
