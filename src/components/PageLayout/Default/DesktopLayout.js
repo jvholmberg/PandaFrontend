@@ -5,10 +5,11 @@ import { DesktopNavigation as Navigation } from '../../Navigation';
 
 const DesktopLayout = ({
   children,
+  className,
   heading: Heading,
   fixed,
   showFixedNavigation,
-  hideFixedNavigation
+  hideFixedNavigation,
 }) => (
   <Responsive minWidth={Responsive.onlyTablet.minWidth}>
     <Visibility
@@ -16,9 +17,8 @@ const DesktopLayout = ({
       onBottomPassed={showFixedNavigation}
       onBottomPassedReverse={hideFixedNavigation}>
       <Segment
-        inverted
+        className={className}
         textAlign='center'
-        style={{ minHeight: 700, padding: '1em 0em' }}
         vertical>
         <Navigation fixed={fixed} />
         <Heading />

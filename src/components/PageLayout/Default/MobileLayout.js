@@ -20,11 +20,7 @@ const MobileLayout = ({
           closeSidebar();
         }}
         style={{ minHeight: '100vh' }}>
-        <Segment
-          inverted
-          textAlign='center'
-          style={{ minHeight: 350, padding: '1em 0em' }}
-          vertical>
+        <Segment inverted textAlign='center' vertical>
           <Container>
             <Menu inverted pointing secondary size='large'>
               <Menu.Item onClick={(e) => {

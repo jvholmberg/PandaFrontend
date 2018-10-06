@@ -1,26 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Button, Icon } from 'semantic-ui-react';
+import { Container, Header } from 'semantic-ui-react';
 
 import './Landing.css';
 
 import { mapStateToProps, mapDispatchToProps } from './selector';
 import { DefaultPageLayout as PageLayout } from '../../components/PageLayout';
 
-const Heading = ({ mobile }) => (
-  <Container text>
+const Heading = () => (
+  <Container style={{ padding: '15rem 0 20rem' }}>
     <Header
       as='h1'
-      content='Imagine-a-Company'
+      content='PandaTime'
       inverted />
     <Header
       as='h2'
-      content='Do whatever you want when you want to.'
+      content='Do your reporting fast, free and without the hazzle!'
       inverted />
-    <Button primary size='huge'>
-      Get Started
-      <Icon name='right arrow' />
-    </Button>
   </Container>
 );
 
@@ -43,7 +39,8 @@ class Landing extends Component {
         open={open}
         toggleSidebar={toggleSidebar}
         closeSidebar={closeSidebar} 
-        heading={Heading}>
+        heading={Heading}
+        className='Landing-Hero'>
         <div style={{ height: '500vh' }}>a</div>
       </PageLayout>
     );
