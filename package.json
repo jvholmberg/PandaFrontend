@@ -28,8 +28,8 @@
     "test": "react-scripts test --env=jsdom",
     "clean": "rm -rf node_modules && npm i",
     "eject": "react-scripts eject",
-    "semantic:build": "node_modules/gulp/bin/gulp.js --gulpfile src/semantic/gulpfile.js build",
-    "semantic:watch": "node_modules/gulp/bin/gulp.js --gulpfile src/semantic/gulpfile.js watch"
+    "semantic:build": "gulp --gulpfile src/semantic/gulpfile.js build",
+    "semantic:watch": "gulp --gulpfile src/semantic/gulpfile.js watch"
   },
   "devDependencies": {
     "enzyme": "^3.5.0",
