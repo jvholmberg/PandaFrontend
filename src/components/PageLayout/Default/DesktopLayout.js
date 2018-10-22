@@ -1,17 +1,20 @@
 import React from 'react';
-import { Responsive, Visibility, Segment, Menu, Container } from 'semantic-ui-react';
+import { Responsive, Visibility, Segment } from 'semantic-ui-react';
 
+import './DesktopLayout.css';
 import { DesktopNavigation as Navigation } from '../../Navigation';
 
 const DesktopLayout = ({
   children,
-  className,
+  className = '',
   heading: Heading,
   fixed,
   showFixedNavigation,
   hideFixedNavigation,
 }) => (
-  <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+  <Responsive
+    className='DesktopLayout-Default'
+    minWidth={Responsive.onlyTablet.minWidth}>
     <Visibility
       once={false}
       onBottomPassed={showFixedNavigation}
@@ -19,7 +22,8 @@ const DesktopLayout = ({
       <Segment
         className={className}
         textAlign='center'
-        vertical>
+        vertical
+        inverted>
         <Navigation fixed={fixed} />
         <Heading />
       </Segment>

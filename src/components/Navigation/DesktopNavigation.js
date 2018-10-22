@@ -15,6 +15,7 @@ const DesktopNavigation = ({ fixed }) => (
       <Menu.Menu position='left'>
         <Menu.Item exact to='/' as={NavLink}>Home</Menu.Item>
         <Menu.Item to='/dashboard' as={NavLink}>Dashboard</Menu.Item>
+        <Menu.Item to='/contact' as={NavLink}>Contact</Menu.Item>
       </Menu.Menu>
       <Menu.Menu position='right'>
         <Menu.Item to='/login' as={Link}>

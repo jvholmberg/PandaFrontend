@@ -4,12 +4,12 @@ import { connect } from 'react-redux';
 import './App.css'
 
 import { mapStateToProps, mapDispatchToProps } from './selector';
+import Contact from '../Contact';
 import Dashboard from '../Dashboard';
 import Landing from '../Landing';
 import Login from '../Login';
 import Register from '../Register';
 
-import Navigation from '../../components/Navigation';
 import NotFound from '../../components/NotFound';
 
 class App extends Component {
@@ -27,6 +27,7 @@ class App extends Component {
         <Route exact path='/' component={Landing} />
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
+        <Route path='/contact' component={Contact} />
 
         {/* Restricted routes */}
         <Route path='/dashboard' component={Dashboard} />
