@@ -41,7 +41,7 @@ class Landing extends Component {
         closeSidebar={closeSidebar} 
         heading={Heading}
         className='Landing-Hero'>
-        <div style={{ height: '500vh' }}>a</div>
+        <div className="foobar" style={{ height: '500vh' }}>a</div>
       </PageLayout>
     );
   }
