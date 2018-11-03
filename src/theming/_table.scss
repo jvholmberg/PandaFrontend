@@ -1,0 +1,42 @@
+@import 'variables';
+
+table.table {
+  width: 100%;
+
+  &.table-bordered thead tr th {
+    border: 1px solid $color-blue;
+  }
+
+  &.table-bordered tbody tr td {
+    border: 1px solid #dfdfdf;
+    background-color: $color-white;
+  }
+
+  thead {
+    background-color: $color-blue;
+    
+    tr {
+      th {
+        padding:  ($gutter / 2) ($gutter / 2);
+      }
+
+      th,
+      th span {
+        font-size: $font-size-md;
+        font-weight: 600;
+        line-height: $font-size-sm;
+        color: $color-white;
+      }
+    }
+  }
+  tbody {
+    
+    tr {
+
+      td {
+        padding: (($gutter / 2) / 2) ($gutter / 2);
+        font-size: $font-size-md;
+      }
+    }
+  }
+}

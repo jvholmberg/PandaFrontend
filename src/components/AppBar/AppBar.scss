@@ -1,0 +1,67 @@
+@import '../../theming/variables';
+
+$size: 5rem;
+$space: 2rem;
+$fontSize: 1.6rem;
+$iconSize: 1.8rem;
+
+.AppBar {
+  position: sticky;
+  top: 0;
+  height: $size;
+  background-color: $color-blue;
+  z-index: 10;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.34);
+
+  .AppBar-Container {
+    box-sizing: border-box;
+
+    button {
+      display: inline-block;
+      padding: 0;
+      width: $size;
+      height: $size;
+      font-size: $fontSize;
+      line-height: $fontSize;
+      border: none;
+      background-color: transparent;
+      box-sizing: border-box;
+      cursor: pointer;
+      vertical-align: bottom;
+  
+      i {
+        font-size: $iconSize;
+        color: #fff;
+      }
+    }
+
+    .AppBar-Links {
+      display: inline-block;
+      text-transform: capitalize;
+  
+      a {
+        display: inline-block;
+        padding: 0 $space;
+        height: $size;
+        color: #fff;
+        font-weight: 400;
+        font-size: $fontSize;
+        line-height: $size;
+        text-decoration: none;
+        box-sizing: border-box;
+      }
+    }
+  
+    .AppBar-Links.collapsed {
+      display: block;
+    }
+  
+    .AppBar-Links a.active {
+      background-color: $color-lighterblue;
+    }
+  
+    .AppBar-Links.collapsed a {
+      display: block;
+    }
+  }
+}

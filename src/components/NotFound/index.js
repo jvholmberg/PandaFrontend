@@ -1,12 +1,9 @@
 import React from 'react';
-import { Container, Header } from 'semantic-ui-react';
 
-const NotFound = () => (
-  <Container>
-    <Header
-      as='h1'
-      content='Not Found'
-      subheader='The page you are trying to access doesnt exist' />
-  </Container>
+const NotFound = ({ title, message }) => (
+  <div>
+    <h1>{title}</h1>
+    <h3>{message}</h3>
+  </div>
 );
 export default NotFound;

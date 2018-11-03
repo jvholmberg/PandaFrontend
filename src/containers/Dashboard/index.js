@@ -1,28 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Button, Icon } from 'semantic-ui-react';
 
 import './Dashboard.css';
 
 import { mapStateToProps, mapDispatchToProps } from './selector';
-import { DefaultPageLayout as PageLayout } from '../../components/PageLayout';
-
-const Heading = ({ mobile }) => (
-  <Container text>
-    <Header
-      as='h1'
-      content='Imagine-a-Company'
-      inverted />
-    <Header
-      as='h2'
-      content='Do whatever you want when you want to.'
-      inverted />
-    <Button primary size='huge'>
-      Get Started
-      <Icon name='right arrow' />
-    </Button>
-  </Container>
-);
+import NutrientsForm from './components/NutrientsForm';
+import ExerciseForm from './components/ExerciseForm';
+import Page from '../../components/Page';
+import SessionTable from './components/SessionTable';
 
 class Dashboard extends Component {
 
@@ -33,19 +18,27 @@ class Dashboard extends Component {
 
   }
   render() {
-    const { fixed, showFixedNavigation, hideFixedNavigation } = this.props;
-    const { open, toggleSidebar, closeSidebar } = this.props;
+    const testData = [
+      { date: '2018-01-01', name: 'Chest day' },
+      { date: '2018-01-02', name: 'Shoulders' },
+    ];
+
     return (
-      <PageLayout
-        fixed={fixed}
-        showFixedNavigation={showFixedNavigation}
-        hideFixedNavigation={hideFixedNavigation}
-        open={open}
-        toggleSidebar={toggleSidebar}
-        closeSidebar={closeSidebar} 
-        heading={Heading}>
-        <div style={{ height: '500vh' }}>a</div>
-      </PageLayout>
+      <Page icon='fas fa-cookie-bite' title='Dashboard'>
+        <div className='row'>
+          <div className='col-sm-12 col-md-6 col-lg-4'>
+            <NutrientsForm onSubmit={(values) => console.log(values)} />
+          </div>
+          <div className='col-sm-12 col-md-6 col-lg-4'>
+            <ExerciseForm onSubmit={(values) => console.log(values)} />
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-sm-12 col-md-12 col-lg-12'>
+            <SessionTable data={testData} />
+          </div>
+        </div>
+      </Page>
     );
   }
 }

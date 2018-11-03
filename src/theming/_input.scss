@@ -1,0 +1,18 @@
+
+@import '../theming/variables';
+
+input.form-control {
+  display: block;
+  margin: $space 0;
+  padding: $space / 1.5;
+  width: 100%;
+  font-size: $font-size-sm;
+  box-sizing: border-box;
+  background: #f5f5f5;
+  border: none;
+  outline: none;
+
+  &:focus {
+    background-color: #e5f3ff;
+  }
+}

@@ -1,0 +1,32 @@
+@import '../../theming/variables';
+
+.Page {
+  background-color: #fafafa;
+  margin-bottom: .5rem;
+  padding: 1rem;
+
+  .Page-Header {
+    margin-bottom: ($gutter / 2);
+
+    i {
+      display: inline-block;
+      padding-right: .75rem;
+      font-size: 1.5rem;
+      line-height: 3rem;
+      color: #bf6512;
+      vertical-align: bottom;
+    }
+
+    h1 {
+      padding: 0;
+    }
+  }
+
+  .Page-content {
+
+  }
+}
+
+
+
+

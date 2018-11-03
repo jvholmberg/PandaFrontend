@@ -1,0 +1,38 @@
+// General
+$base-size: 10px;
+$space: 2rem;
+$gutter: 4%;
+$grid-max-width: 120rem;
+$grid-width: (100% - $gutter);
+
+// Font-sizes
+$font-size: 1rem;
+$font-size-sm: 1.2rem;
+$font-size-md: 1.6rem;
+$font-size-lg: 2.2rem;
+
+$font-header-size: 2rem;
+$font-header-size-sm: 2.4rem;
+$font-header-size-md: 3.2rem;
+$font-header-size-lg: 4.4rem;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+
+// Colors
+$color-lightbrown: #bf6512;
+
+$color-white: #fff;
+$color-almost-dark: #808080;
+$color-black: #000;
+
+$color-green: #44a878;
+$color-lightgreen: #4eb785;
+
+$color-blue: #033a6a;
+$color-lightblue: #044883;
+$color-lighterblue: #00539a;
+// $color-blue: #0098fa;
+// $color-lightblue: #1fa8fc;

@@ -1,15 +1,10 @@
 import React from 'react';
-import { Container, Header, Message } from 'semantic-ui-react';
 
 const Error = ({ title, message, stacktrace }) => (
-  <Container>
-    <Header
-      as='h1'
-      content={title}
-      subheader={message} />
-      <Message>
-        {stacktrace}
-      </Message>
-  </Container>
+  <div>
+    <h1>{title}</h1>
+    <h3>{message}</h3>
+    <p>{stacktrace}</p>
+  </div>
 );
 export default Error;

@@ -1,0 +1,41 @@
+@import 'variables';
+
+.btn {
+  padding: ($space / 2) $space; 
+  font-size: $font-size-sm;
+  font-weight: 600;
+  background-color: $color-white;
+  border: 1px solid $color-almost-dark;
+  color: $color-almost-dark;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    color: $color-black;
+    border-color: $color-black;
+  }
+}
+
+.btn.btn-success {
+  background-color: $color-green;
+  border: 1px solid $color-green;
+  color: $color-white;
+
+  &:hover,
+  &:active {
+    background-color: $color-lightgreen;
+    border: 1px solid $color-lightgreen;
+  }
+}
+
+.btn.btn-primary {
+  background-color: $color-blue;
+  border: 1px solid $color-blue;
+  color: $color-white;
+
+  &:hover,
+  &:active {
+    background-color: $color-lightblue;
+    border: 1px solid $color-lightblue;
+  }
+}
