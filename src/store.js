@@ -4,6 +4,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunkMiddleware from 'redux-thunk';
 import createHistory from "history/createBrowserHistory";
 
+import { reducer as formReducer } from 'redux-form';
 import appReducer from './containers/App/reducer';
 import landingReducer from './containers/Landing/reducer';
 import dashboardReducer from './containers/Dashboard/reducer';
@@ -19,6 +20,7 @@ const middlewares = [
 const store = createStore(
   combineReducers({
     routing: routerReducer,
+    form: formReducer,
     app: appReducer,
     landing: landingReducer,
     dashboard: dashboardReducer,

@@ -4,9 +4,11 @@ import { connect } from 'react-redux';
 import './Dashboard.css';
 
 import { mapStateToProps, mapDispatchToProps } from './selector';
+import Page from '../../components/Page';
 import NutrientsForm from './components/NutrientsForm';
 import ExerciseForm from './components/ExerciseForm';
-import Page from '../../components/Page';
+import ExerciseChart from './components/ExerciseChart';
+import SessionForm from './components/SessionForm';
 import SessionTable from './components/SessionTable';
 
 class Dashboard extends Component {
@@ -25,6 +27,16 @@ class Dashboard extends Component {
 
     return (
       <Page icon='fas fa-cookie-bite' title='Dashboard'>
+        <div className='row'>
+          <div className='col-sm-12 col-md-12 col-lg-12'>
+            <ExerciseChart />
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-sm-12 col-md-12 col-lg-12'>
+            <SessionForm onSubmit={(values) => console.log(values)} />
+          </div>
+        </div>
         <div className='row'>
           <div className='col-sm-12 col-md-6 col-lg-4'>
             <NutrientsForm onSubmit={(values) => console.log(values)} />
