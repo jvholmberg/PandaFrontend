@@ -1,10 +1,9 @@
 import React from 'react';
-
-const Input = ({ label, className, props}) => (
+const Input = ({ label, className, input, meta: { touched, error }, ...props }) => (
   <div className={className}>
     <label>
       {label}
-      <input className='form-control' {...props} />
+      <input className='form-control' {...input} {...props} />
     </label>
   </div>
 );

@@ -30,15 +30,16 @@ const renderExerciseSet = ({ fields, meta: { error } }) => (
     </div>
       {fields && fields.map((field, idx) => (
         <div key={idx}>
-          <h3>{idx}</h3>
           <div className='col-sm-4 col-md-2 col-lg-2'>
-            <Field type='text' name='weight' component={Input} placeholder='Weight' />
-          </div>
-          <div className='col-sm-4 col-md-2 col-lg-2'>
-            <Field type='text' name='reps' component={Input} placeholder='Repetitions' />
-          </div>
-          <div className='col-sm-4 col-md-2 col-lg-2'>
-            <Field type='text' name='drops' component={Input} placeholder='Drops' />
+            <div>
+              <h3>{idx + 1}</h3>
+              <Button type='button' btnType='danger' onClick={() => fields.remove(idx)}>
+                Remove set
+              </Button>
+            </div>
+            <Field type='text' name={`${field}.weight`} component={Input} label='Weight' />
+            <Field type='text' name={`${field}.reps`} component={Input} label='Repetitions' />
+            <Field type='text' name={`${field}.drops`} component={Input} label='Drops' />
           </div>
         </div>
       ))}

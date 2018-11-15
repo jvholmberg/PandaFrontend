@@ -1,0 +1,18 @@
+@import '../../theming/variables';
+
+.Expander {
+  &.collapsed {
+    .Expander-Title {
+
+    }
+    .Expander-Content {
+      display: none;
+    }
+  }
+  .Expander-Title {
+    font-size: $font-size-md;
+  }
+  .Expander-Content {
+    
+  }
+}

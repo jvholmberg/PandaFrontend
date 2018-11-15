@@ -14,16 +14,17 @@ const data = [
       {name: 'Page G', uv: 3490, pv: 4300, amt: 2100},
 ];
 const ExerciseChart = () => (
-  <ResponsiveContainer width='100%' height={300}>
-    <BarChart data={data}
-          margin={{top: 5, right: 30, left: 20, bottom: 5}}>
-      <CartesianGrid strokeDasharray="3 3"/>
-      <XAxis dataKey="name"/>
+  <ResponsiveContainer height={300}>
+    <BarChart data={data}>
+      <XAxis dataKey='name'/>
       <YAxis/>
       <Tooltip/>
       <Legend />
-      <Bar dataKey="pv" fill="#8884d8" />
-      <Bar dataKey="uv" fill="#82ca9d" />
+      <Bar dataKey='pv' fill='#8884d8' />
+      <Bar dataKey='pv' fill='#8d8fd8' />
+      <Bar dataKey='uv' fill='#82ca9d' />
+      <Bar dataKey='uv' fill='#82ca9d' />
+      <Bar dataKey='uv' fill='#82ca9d' />
     </BarChart>
   </ResponsiveContainer>
 );
